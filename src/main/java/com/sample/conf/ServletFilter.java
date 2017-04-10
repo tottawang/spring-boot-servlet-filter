@@ -10,7 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 
-public class ApplicationFilter implements Filter {
+public class ServletFilter implements Filter {
 
   @Override
   public void init(FilterConfig filterConfig) throws ServletException {
@@ -21,7 +21,7 @@ public class ApplicationFilter implements Filter {
   @Override
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
       throws IOException, ServletException {
-    System.out.println("application filter is applied");
+    System.out.println("servlet filter is applied");
     chain.doFilter(request, response);
   }
 

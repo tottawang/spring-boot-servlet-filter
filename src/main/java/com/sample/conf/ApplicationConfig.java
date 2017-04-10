@@ -12,6 +12,7 @@ public class ApplicationConfig extends ResourceConfig {
 
   public ApplicationConfig() {
     packages("com.sample.resources");
+    this.register(JerseyFilter.class);
   }
 
   @Bean
@@ -24,6 +25,6 @@ public class ApplicationConfig extends ResourceConfig {
 
   @Bean(name = "appFilter")
   public Filter appFilter() {
-    return new ApplicationFilter();
+    return new ServletFilter();
   }
 }
